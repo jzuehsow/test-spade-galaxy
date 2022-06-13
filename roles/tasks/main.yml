@@ -1,0 +1,17 @@
+- name: Stop docker service
+  ansible.builtin.service:
+      name: docker
+      state: stopped
+
+- name: Set docker registry
+  ansible.builtin.shell:
+      cmd: docker -d --insecure-registry {{ registry_ip }}:5000
+
+- name: Start docker registry
+  ansible.builtin.service:
+      name: docker
+      state: started
+
+- name: Curl docker registry
+  ansible.builtin.shell:
+    cmd: curl {{ registry_ip }}

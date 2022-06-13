@@ -1,0 +1,6 @@
+namespace: "spade"
+name: "connect-docker-registry"
+version: "1.0.0"
+authors: "je007981"
+readme: "README.md"
+repository: "https://github.com/jzuehsow/test-spade-galaxy.git"
